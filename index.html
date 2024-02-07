@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images\favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images\favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images\favicon\favicon-16x16.png">
+    <link rel="manifest" href="images\favicon\site.webmanifest">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="content">
+        <!-- <div class="bigText">MUSIC</div> -->
+        <!-- <div class="header">
+            moosic
+        </div> -->
+        <div class="body">
+            
+            <div class="leftBar">
+                <div class="playlists">
+                    <!-- playlists go here -->
+                </div>
+            </div>
+            <div class="songs">
+                <!-- songs go here -->
+                <div class="song1">
+                    <div class="songArt"></div>
+                    <div class="songArtist"></div>
+                </div>
+            </div>
+        </div>
+        <div class="playBottom">
+            <div class="customControls">
+                <div class="leftControls">
+                    <button class="skipBack btn"><img class="btnImg" src="./images/icons/skip_previous_FILL0_wght400_GRAD0_opsz24.svg" alt="Back"></button>
+                    <button class="playPause btn"><img class="btnImg" src="./images/icons/play_circle_FILL0_wght400_GRAD0_opsz24.svg" alt="Play"></button>
+                    <button class="skipForward btn"><img class="btnImg" src="./images/icons/skip_next_FILL0_wght400_GRAD0_opsz24.svg" alt="Next"></button>
+                </div>
+                
+                <!-- Other control buttons -->
+                <div class="centreControls">
+                    <div class="songTitle dull">no song playing</div>
+                    <div class="progressContainer" id="progressContainer">
+                        <div class="progressBar"></div>
+                    </div>
+                </div>
+
+                <div class="rightControls">
+                    <button class="shuffle btn"><img class="btnImg" src="./images/icons/shuffle_FILL0_wght400_GRAD0_opsz24.svg" alt="Shuffle"></button>
+                    <button class="repeat btn"><img class="btnImg" src="./images/icons/repeat_FILL0_wght400_GRAD0_opsz24.svg" alt="Repeat"></button>
+                    <button class="volume btn" id="volumeButton"><img class="btnImg" src="./images/icons/volume_up_FILL0_wght400_GRAD0_opsz24.svg" alt="Volume"></button>
+                    <input class="2" type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigCircle"></div>
+    <div class="bigSquare"></div>
+    <div class="smallSquare"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js" integrity="sha512-YsR46MmyChktsyMMou+Bs74oCa/CDdwft7rJ5wlnmDzMj1mzqncsfJamEEf99Nk7IB0JpTMo5hS8rxB49FUktQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="songMap.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
+

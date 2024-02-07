@@ -1,0 +1,11 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wiki-Bird/music",
+  "author": "wiki-Bird <41028518+wiki-Bird@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
