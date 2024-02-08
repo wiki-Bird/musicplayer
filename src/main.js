@@ -90,11 +90,23 @@ function nextSong() {
         globalAudio.play();
     }
     else if (shuffle) {
-        playSong(Math.floor(Math.random() * songMap[currentPlaylist].length), currentPlaylist);
+        shuffleChoose();
     }
     else {
         playSong(currentSongIndex + 1, currentPlaylist);
     }
+}
+function shuffleChoose() {
+    let random = Math.floor(Math.random() * songMap[currentPlaylist].length);
+    if (songMap[currentPlaylist].length <= 2)
+        return random;
+    // if the song is in the last 10 songs, and there are more than 20 songs, OR the song is the current song choose again
+    while ((random > songMap[currentPlaylist].length - 10 && songMap[currentPlaylist].length > 20)
+        || (random === currentSongIndex)) {
+        console.log('Choosing again');
+        random = Math.floor(Math.random() * songMap[currentPlaylist].length);
+    }
+    playSong(random, currentPlaylist);
 }
 function prevSong() {
     // if repeat, or the first song, just restart the song
@@ -205,7 +217,7 @@ function playPause() {
     }
     else {
         if (shuffle)
-            playSong(Math.floor(Math.random() * songMap[currentPlaylist].length), currentPlaylist);
+            shuffleChoose();
         else
             playSong(0, currentPlaylist);
     }
