@@ -92,8 +92,12 @@ function nextSong() {
     else if (shuffle) {
         shuffleChoose();
     }
-    else {
+    // if there is a next song
+    else if (songMap[currentPlaylist].length < currentSongIndex + 1) {
         playSong(currentSongIndex + 1, currentPlaylist);
+    }
+    else {
+        // no next song, do nothing
     }
 }
 function shuffleChoose() {
