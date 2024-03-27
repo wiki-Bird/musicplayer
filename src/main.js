@@ -93,7 +93,7 @@ function nextSong() {
         shuffleChoose();
     }
     // if there is a next song
-    else if (songMap[currentPlaylist].length < currentSongIndex + 1) {
+    else if (songMap[currentPlaylist].length > currentSongIndex + 1) {
         playSong(currentSongIndex + 1, currentPlaylist);
     }
     else {
